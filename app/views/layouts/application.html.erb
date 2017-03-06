@@ -6,9 +6,33 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="navbar-fixed">
+       <nav>
+         <div class="nav-wrapper container">
+           <a href="/" class="brand-logo">Rails Blog</a>
+           <ul id="nav-mobile" class="right hide-on-med-and-down">
+             <li><a href="/">Home</a></li>
+             <li><a href="/posts.html">Posts</a></li>
+             <!-- <li><a href="badges.html">Components</a></li> -->
+           </ul>
+         </div>
+       </nav>
+     </div>
+   </header>
+    <main class="content">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
   </body>
 </html>
